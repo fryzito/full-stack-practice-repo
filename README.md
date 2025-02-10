@@ -1,0 +1,1 @@
+ ## Reade file for portafolio of Gerar Quispe
