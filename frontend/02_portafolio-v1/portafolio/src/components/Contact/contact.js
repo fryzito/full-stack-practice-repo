@@ -17,12 +17,14 @@ const Contact = () => {
     e.preventDefault();
 
     emailjs
-      .sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, {
-        publicKey: 'YOUR_PUBLIC_KEY',
+      .sendForm('service_sv7feqv', 'template_e16azcc', form.current, {
+        publicKey: '2sa2ViDA5_x8kgvKH2bDT',
       })
       .then(
         () => {
           console.log('SUCCESS!');
+          e.target.reset();
+          alert('Email sent successfully!');
         },
         (error) => {
           console.log('FAILED...', error.text);

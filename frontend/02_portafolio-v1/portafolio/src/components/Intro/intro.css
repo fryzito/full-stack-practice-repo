@@ -34,7 +34,7 @@
 }
 
 .introName {
-    color: yellow
+    color: #00ADB5;
 }
 
 .introPara {
@@ -44,11 +44,15 @@
 }
 
 .btn {
-    background: white;
+    background: #EEEEEE;
     margin: 1rem 0;
     padding: 0.5rem 1.5rem;
     border: none;
     border-radius: 2rem;
+}
+
+.btn:hover {
+    background: #00ADB5;
 }
 
 .btnImg {
@@ -62,7 +66,7 @@
         right: -10vw;
     }
     .introContent {
-        font-size: 10vw;
+        font-size: 5vw;
     }
     .hello {
         font-size: 4.5vw;
@@ -72,6 +76,6 @@
 
 @media screen and (max-width: 480px) {
     .bg {
-        right: -20vw;
+        right: -35vw;
     }
 }

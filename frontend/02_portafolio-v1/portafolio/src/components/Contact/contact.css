@@ -60,19 +60,23 @@
     max-width: 40rem;
     margin: 0.5rem;
     padding: 0.5rem 1rem;
-    color: white;
+    color: #EEEEEE;
     border: none;
     border-radius: 0.5rem;
-    background: rgb(40,40,40);
+    background: #222831;
 }
 
 .submitBtn {
-    background: white;
+    background: #EEEEEE;
     border: none;
     border-radius: 0.5rem;
     margin: 2rem;
     padding: 0.75rem 3.5rem;
 }
+
+.submitBtn:hover {
+    background-color: #00ADB5;
+  }
 
 .links {
     display: flex;

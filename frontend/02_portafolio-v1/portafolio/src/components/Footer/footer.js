@@ -4,7 +4,7 @@ import './footer.css';
 const Footer = () => {
   return (
     <footer className='footer'>
-        Copyright &#169; 2025 Gerar Francis QT. All right received.
+        Copyright &#169; 2025 GQuispe All right received.
         {/* div en tres partes, apilacion hacia vertical */}
         {/* <div>
             <img src="" alt="" className="logo" />
