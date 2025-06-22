@@ -1,16 +1,14 @@
  # Repo to practice Backend and Frontend
  
- Diferentes proyectos para practicar y aprender
+ Diferent projects to practica and learn
 
 
 
 ### django + react
 
  ### Django
-    > Preferentemente correr la consola como administrador para evitar errores.
-    > Se crea un entorno similar a cuando se trabajan con notebook en python.
-
+    > remember to run as admin, in order to avoid error
+    > It is necesary run env similar to notebooks
 
  ### React
-    > Construccion con javascript y vite ( preferible utilizar Vite para construir proyectos React)
-    
+    > building projects with javascript + vite ( preferable use Vite to build React project)
