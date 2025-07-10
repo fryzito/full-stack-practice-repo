@@ -1,10 +1,8 @@
- # Repo to practice Backend and Frontend
+ # Practice Repo Backend and Frontend
  
- Diferent projects to practica and learn
+ Projects to practica and learn
 
-
-
-### django + react
+### Stacks
 
  ### Django
     > remember to run as admin, in order to avoid error
