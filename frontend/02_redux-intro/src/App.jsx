@@ -8,6 +8,7 @@ const App = () => {
   const movies = useSelector( (state) => state.movies.list );
   // second part
   const users = useSelector( (state)=> state.users);
+  
   const dispatch = useDispatch();
 
   const [userId, setUserId] = useState(""); // Estado para el input
@@ -34,6 +35,7 @@ const App = () => {
         Add movie
       </button>
       <hr/>
+
       <h3>Tipo de Usuario:{users.type}</h3>
       <button onClick={() => dispatch(setType('Admin'))}>
         Modificar tipo
@@ -51,13 +53,27 @@ const App = () => {
           ))
           :
           null
-        }      
+        }
       </ul>
       <button onClick={()=>dispatch(fetchUsers())}>
         Obtener Usuarios
       </button>
-      <hr />
 
+      <hr />
+       <div>
+        {users.loading ? 'LOADING':null}
+      </div>
+      <ul>
+        {
+          users.user ? users.user.map(user=>(
+            <li key={user.id}>
+              {user.name}
+            </li>
+          ))
+          :
+          null
+        }
+      </ul>
       <input
         type="number"
         placeholder="Ingresar ID de usuario"
@@ -65,7 +81,7 @@ const App = () => {
         onChange={e => setUserId(e.target.value)}
       />
       <button onClick={() => dispatch(fetchUsers(userId))}>
-        Agregar usuario por ID
+        Obtener Usuario por ID
       </button>
       
     </>
