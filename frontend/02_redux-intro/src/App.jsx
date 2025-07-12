@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux"
 import { addMovie} from './store/movies'
 import { setType, fetchUsers } from './store/users'
@@ -8,6 +9,8 @@ const App = () => {
   // second part
   const users = useSelector( (state)=> state.users);
   const dispatch = useDispatch();
+
+  const [userId, setUserId] = useState(""); // Estado para el input
 
   return (
     <>
@@ -36,10 +39,35 @@ const App = () => {
         Modificar tipo
       </button>
       <hr />
+      <div>
+        {users.loading ? 'LOADING':null}
+      </div>
+      <ul>
+        {
+          users ? users.users.map(user=>(
+            <li key={user.id}>
+              {user.name}
+            </li>
+          ))
+          :
+          null
+        }      
+      </ul>
       <button onClick={()=>dispatch(fetchUsers())}>
         Obtener Usuarios
       </button>
+      <hr />
 
+      <input
+        type="number"
+        placeholder="Ingresar ID de usuario"
+        value={userId}
+        onChange={e => setUserId(e.target.value)}
+      />
+      <button onClick={() => dispatch(fetchUsers(userId))}>
+        Agregar usuario por ID
+      </button>
+      
     </>
   )
 }
